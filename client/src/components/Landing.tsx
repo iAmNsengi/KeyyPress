@@ -1,33 +1,21 @@
-import { motion } from "framer-motion";
-import { LampContainer } from "./ui/lamp";
-import { BackgroundBeamsWithCollision } from "./ui/beams-with-collision";
+"use client";
+
+import { cn } from "../lib/utils";
+import { Boxes } from "./ui/background-boxes";
 
 const Landing = () => {
   return (
-    <>
-      <BackgroundBeamsWithCollision>
-        <LampContainer>
-          <motion.h1
-            initial={{ opacity: 0.5, y: 100 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: 0.3,
-              duration: 0.8,
-              ease: "easeInOut",
-            }}
-            className="mt-32 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
-          >
-            ZerSquare.dev <br />
-            <span className="text-2xl italic text-gray-500">
-              "We can do it better!"
-            </span>
-          </motion.h1>
-          <button className="inline-flex mt-12 h-12 animate-shimmer items-center justify-center rounded-md border border-orange-600 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-orange-50 hover:scale-105">
-            Get Started
-          </button>
-        </LampContainer>
-      </BackgroundBeamsWithCollision>
-    </>
+    <div className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
+      <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
+
+      <Boxes />
+      <h1 className={cn("md:text-6xl text-xl text-white relative z-20")}>
+        Key<span className="text-orange-600 font-bold">Press</span>
+      </h1>
+      <p className="text-center text-lg mt-2 text-neutral-300 relative z-20">
+        We can do it better
+      </p>
+    </div>
   );
 };
 

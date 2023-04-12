@@ -4,6 +4,7 @@ import { cn } from "../lib/utils";
 import Navbar from "./Navbar";
 import { Boxes } from "./ui/background-boxes";
 import { BackgroundBeamsWithCollision } from "./ui/beams-with-collision";
+import { ColourfulText } from "./ui/flush-text";
 
 const Header = () => {
   return (
@@ -16,7 +17,10 @@ const Header = () => {
 
             <Boxes />
             <h1 className={cn("md:text-6xl text-xl text-white relative z-20")}>
-              Keyy<span className="text-orange-600 font-bold">Press</span>
+              Keyy
+              <span className="text-orange-600 font-bold">
+                <ColourfulText text="Press" />{" "}
+              </span>
             </h1>
             <p className="text-center text-lg mt-2 text-neutral-300 relative z-20 italic">
               We can do it better

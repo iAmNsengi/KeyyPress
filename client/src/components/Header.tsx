@@ -4,7 +4,7 @@ import { cn } from "../lib/utils";
 import Navbar from "./Navbar";
 import { Boxes } from "./ui/background-boxes";
 import { BackgroundBeamsWithCollision } from "./ui/beams-with-collision";
-import { ColourfulText } from "./ui/flush-text";
+import { ColourfulText } from "./ui/colorful-text";
 
 const Header = () => {
   return (
@@ -12,19 +12,29 @@ const Header = () => {
       <div className="flex flex-col pt-14">
         <Navbar />
         <div className="h-screen w-screen">
-          <div className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
+          <div className="h-1/2 relative w-screen overflow-hidden bg-slate-900 flex  items-center justify-between px-20 rounded-lg">
             <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
 
             <Boxes />
-            <h1 className={cn("md:text-6xl text-xl text-white relative z-20")}>
-              Keyy
-              <span className="text-orange-600 font-bold">
-                <ColourfulText text="Press" />{" "}
-              </span>
-            </h1>
-            <p className="text-center text-lg mt-2 text-neutral-300 relative z-20 italic">
-              We can do it better
-            </p>
+            <div className="">
+              <h2
+                className={cn("md:text-4xl text-xl text-white relative z-20")}
+              >
+                We are
+              </h2>
+              <h1
+                className={cn("md:text-8xl text-xl text-white relative z-20")}
+              >
+                Keyy
+                <span className="text-orange-600 font-bold">
+                  <ColourfulText text="Press..." />
+                </span>
+              </h1>
+              <p className=" text-lg mt-2 text-neutral-300 relative z-20 py-6">
+                A software development company dedicated to serving you with
+                great software solutions,...
+              </p>
+            </div>
           </div>
         </div>
       </div>

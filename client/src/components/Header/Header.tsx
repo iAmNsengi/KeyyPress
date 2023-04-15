@@ -1,12 +1,12 @@
 "use client";
 
-import { cn } from "../../lib/utils";
 import Navbar from "./Navbar";
 import { Boxes } from "../ui/background-boxes";
-import { BackgroundBeamsWithCollision } from "../ui/beams-with-collision";
-import { ColourfulText } from "../ui/colorful-text";
+  import { ColourfulText } from "../ui/colorful-text";
 import Globe from "./Globe";
 // import GlobeComponent from "./Globe";
+import { cn } from "../../lib/utils";
+import { BackgroundBeamsWithCollision } from "../ui/beams-with-collision";
 
 const Header = () => {
   return (

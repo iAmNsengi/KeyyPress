@@ -1,6 +1,6 @@
 const Globe = () => {
   return (
-    <div className="relative w-full h-[400px] flex items-center justify-center bg-slate-900 overflow-hidden z-[999] size-80">
+    <div className="relative w-fit h-[400px] flex items-center justify-center overflow-hidden z-[999] ">
       {/* Grid lines for globe effect */}
       <div className="absolute w-64 h-64 rounded-full border-2 border-blue-500/20 animate-[spin_20s_linear_infinite]">
         <div className="absolute inset-0 border-2 border-blue-500/20 rounded-full rotate-[20deg]" />

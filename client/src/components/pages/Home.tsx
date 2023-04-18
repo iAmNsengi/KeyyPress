@@ -1,11 +1,9 @@
-import Header from "../Header";
-import Globe from "../Header/Globe";
+import Header from "../Header/Header";
 
 const Home = () => {
   return (
     <div>
       <Header />
-      
     </div>
   );
 };

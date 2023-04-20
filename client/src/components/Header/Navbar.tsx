@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="bg-[#0F172A] p-4 py-8">
+    <nav className={`bg-[#0F172A] p-4 py-8 ${isOpen ? "pt-60" : "pt-20"}`}>
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <Link

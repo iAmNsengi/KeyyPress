@@ -1,5 +1,7 @@
+import { LampDemo } from "./components/Landing";
+
 function App() {
-  return <p className="text-3xl font-bold text-red-500">ZerSquare.dev</p>;
+  return <LampDemo />;
 }
 
 export default App;

@@ -1,7 +1,7 @@
-import { LampDemo } from "./components/Landing";
+import Landing from "./components/Landing";
 
 function App() {
-  return <LampDemo />;
+  return <Landing />;
 }
 
 export default App;

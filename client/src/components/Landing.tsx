@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { LampContainer } from "./ui/lamp";
 
-export function LampDemo() {
+const Landing = () => {
   return (
     <LampContainer>
       <motion.h1
@@ -14,8 +14,13 @@ export function LampDemo() {
         }}
         className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
       >
-        Build lamps <br /> the right way
+        ZerSquare.dev <br />
+        <span className="text-2xl italic text-gray-500">
+          "We can do it better!"
+        </span>
       </motion.h1>
     </LampContainer>
   );
-}
+};
+
+export default Landing;

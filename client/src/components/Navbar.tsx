@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Navbar: React.FC = () => {
   return (
-    <div className="bg-black text-white py-3 flex items-center justify-between px-10h">
+    <div className="navbar bg-black text-white py-3 flex items-center justify-between px-10">
       <h2>zerSquare</h2>
       <ul className="flex items-center justify between gap-2 py-2">
         <li>

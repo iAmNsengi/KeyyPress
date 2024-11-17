@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navbar ul li {
+  @apply hover:text-orange-500;
+}

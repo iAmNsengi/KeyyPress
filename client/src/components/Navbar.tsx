@@ -1,7 +1,7 @@
 import React from "react";
 
 const Navbar: React.FC = () => {
-  return <div>Navbar component</div>;
+  return <div></div>;
 };
 
 export default Navbar;

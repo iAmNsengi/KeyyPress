@@ -17,7 +17,7 @@ const Landing = () => {
             }}
             className="mt-32 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
           >
-            ZerSquare.dev <br />
+            zersquare.dev <br />
             <span className="text-2xl italic text-gray-500">
               "We can do it better!"
             </span>

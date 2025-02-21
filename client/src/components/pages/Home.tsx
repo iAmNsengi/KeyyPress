@@ -1,11 +1,17 @@
 import Header from "../Header/Header";
-import MovingCards from "../Header/MovingCards";
+import Services from "../sections/Services";
+import WhyChooseUs from "../sections/WhyChooseUs";
+import Portfolio from "../sections/Portfolio";
+import ContactCTA from "../sections/ContactCTA";
 
 const Home = () => {
   return (
-    <div>
+    <div className="bg-slate-900">
       <Header />
-      another text
+      <Services />
+      <WhyChooseUs />
+      <Portfolio />
+      <ContactCTA />
     </div>
   );
 };

@@ -14,7 +14,7 @@ const Header = () => {
       <div className="flex flex-col min-h-screen">
         <Navbar />
         <div className="flex-1 w-full">
-          <div className="relative w-full h-full bg-slate-900 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pb-20">
+          <div className="relative w-full h-full bg-slate-900 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pb-20 pt-36">
             <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
             <Boxes />
 

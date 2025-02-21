@@ -79,9 +79,8 @@ module.exports = {
           },
         },
         scroll: {
-          to: {
-            transform: "translateX(calc(-50% - var(--gap)/2))",
-          },
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
         },
       },
       animation: {

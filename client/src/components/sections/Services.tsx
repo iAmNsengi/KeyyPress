@@ -29,11 +29,11 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="py-24 px-4 relative overflow-hidden">
+    <section className="py-32 px-4 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Our Services
+            Our <span className="text-orange-600">Services</span>
           </h2>
           <p className="text-neutral-400 max-w-2xl mx-auto">
             We offer comprehensive digital solutions to help your business

@@ -2,6 +2,7 @@ import { Suspense, lazy } from "react";
 import Header from "../Header/Header";
 import Services from "../sections/Services";
 import WhyChooseUs from "../sections/WhyChooseUs";
+import ClientLogos from "../sections/ClientLogos";
 
 // Lazy load only below-the-fold components
 const Portfolio = lazy(() => import("../sections/Portfolio"));
@@ -37,6 +38,10 @@ const Home = () => {
         <ContactCTA />
       </Suspense>
 
+      <Suspense fallback={<SectionLoader />}>
+        <ClientLogos />
+      </Suspense>
+      
       <Suspense fallback={<SectionLoader />}>
         <Footer />
       </Suspense>

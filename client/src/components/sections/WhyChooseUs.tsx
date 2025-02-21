@@ -64,7 +64,7 @@ export function WhyChooseUs() {
   ];
 
   return (
-    <section id="why-choose-us" className="bg-slate-800 py-20">
+    <section id="why-choose-us" className="bg-slate-800 py-40">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center text-white mb-16">
           Why Choose <span className="text-orange-600">Us</span>

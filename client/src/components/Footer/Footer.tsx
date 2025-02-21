@@ -107,7 +107,8 @@ const Footer = () => {
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center">
           <p>
-            &copy; {new Date().getFullYear()} KeyyPress. All rights reserved.
+            &copy; {new Date().getFullYear()} Keyy{" "}
+            <span className="text-orange-600">Press</span>. All rights reserved.
           </p>
         </div>
       </div>

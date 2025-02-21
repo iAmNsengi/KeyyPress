@@ -11,15 +11,15 @@ import MovingCards from "./MovingCards";
 const Header = () => {
   return (
     <BackgroundBeamsWithCollision>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col h-full">
         <Navbar />
         <div className="flex-1 w-full">
-          <div className="relative w-full h-full bg-slate-900 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pb-20 pt-36">
+          <div className="relative w-full h-full bg-slate-900 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pb-20 ">
             <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
             <Boxes />
 
             {/* Main content container - adjusted padding top */}
-            <div className="relative z-20 text-center max-w-4xl mx-auto pt-96">
+            <div className="relative z-20 text-center max-w-4xl mx-auto pt-72">
               <h2 className="text-xl md:text-2xl lg:text-3xl text-white font-light tracking-wide mb-3">
                 We are
               </h2>
@@ -41,16 +41,15 @@ const Header = () => {
               </div>
             </div>
 
-            {/* Globe positioned in bottom right with slice effect and responsive visibility */}
-            <div className="absolute bottom-0 right-0 transform translate-x-1/3 translate-y-1/2 z-30 overflow-hidden hidden md:block">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900 z-10" />
-                <Globe />
-              </div>
+            {/* Globe positioned at the bottom */}
+            <div className="w-full relative mt-20">
+              <Globe />
             </div>
           </div>
         </div>
-        <MovingCards />
+        <div className="-mt-20">
+          <MovingCards />
+        </div>
       </div>
     </BackgroundBeamsWithCollision>
   );

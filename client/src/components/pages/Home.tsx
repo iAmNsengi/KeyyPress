@@ -1,8 +1,8 @@
 import Header from "../Header/Header";
 import Services from "../sections/Services";
-import WhyChooseUs from "../sections/WhyChooseUs";
 import Portfolio from "../sections/Portfolio";
 import ContactCTA from "../sections/ContactCTA";
+import WhyChooseUs from "../sections/WhyChooseUs";
 
 const Home = () => {
   return (

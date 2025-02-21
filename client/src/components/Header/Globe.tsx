@@ -1,35 +1,59 @@
+import createGlobe from "cobe";
+import { useEffect, useRef } from "react";
+
 const Globe = () => {
   return (
-    <div className="relative w-[200px] h-[200px] md:w-[300px] md:h-[300px] lg:w-[400px] lg:h-[400px] flex items-center justify-center overflow-hidden">
-      {/* Grid lines for globe effect */}
-      <div className="absolute w-full h-full rounded-full border-2 border-blue-500/20 animate-[spin_20s_linear_infinite]">
-        <div className="absolute inset-0 border-2 border-blue-500/20 rounded-full rotate-[20deg]" />
-        <div className="absolute inset-0 border-2 border-blue-500/20 rounded-full rotate-[40deg]" />
-        <div className="absolute inset-0 border-2 border-blue-500/20 rounded-full rotate-[60deg]" />
-        <div className="absolute inset-0 border-2 border-blue-500/20 rounded-full rotate-[80deg]" />
-      </div>
-
-      {/* Main globe sphere */}
-      <div className="relative w-full h-full">
-        <div className="absolute inset-0 rounded-full bg-blue-500/10 animate-pulse" />
-
-        {/* Dots representing locations */}
-        <div className="absolute w-2 h-2 bg-blue-400 rounded-full top-1/4 left-1/4 animate-ping" />
-        <div className="absolute w-2 h-2 bg-blue-400 rounded-full top-1/3 right-1/3 animate-ping [animation-delay:1s]" />
-        <div className="absolute w-2 h-2 bg-blue-400 rounded-full bottom-1/4 right-1/4 animate-ping [animation-delay:2s]" />
-
-        {/* Glowing effect */}
-        <div className="absolute inset-0 rounded-full bg-gradient-to-r from-blue-500/20 to-transparent animate-[spin_20s_linear_infinite]" />
-      </div>
-
-      {/* Orbiting particles */}
-      <div className="absolute w-full h-full animate-[spin_15s_linear_infinite]">
-        <div className="absolute w-1 h-1 bg-blue-400 rounded-full top-0 left-1/2 animate-pulse" />
-        <div className="absolute w-1 h-1 bg-blue-400 rounded-full bottom-0 left-1/2 animate-pulse" />
-        <div className="absolute w-1 h-1 bg-blue-400 rounded-full left-0 top-1/2 animate-pulse" />
-        <div className="absolute w-1 h-1 bg-blue-400 rounded-full right-0 top-1/2 animate-pulse" />
-      </div>
+    <div className="relative">
+      <GlobeComponent className="absolute -right-32 bottom-0 opacity-70" />
     </div>
+  );
+};
+
+export const GlobeComponent = ({ className }: { className?: string }) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    let phi = 0;
+
+    if (!canvasRef.current) return;
+
+    const globe = createGlobe(canvasRef.current, {
+      devicePixelRatio: 2,
+      width: 600 * 2,
+      height: 600 * 2,
+      phi: 0,
+      theta: 0,
+      dark: 1,
+      diffuse: 1.2,
+      mapSamples: 16000,
+      mapBrightness: 6,
+      baseColor: [0.3, 0.3, 0.3],
+      markerColor: [0.1, 0.8, 1],
+      glowColor: [1, 1, 1],
+      markers: [
+        // longitude latitude
+        { location: [37.7595, -122.4367], size: 0.03 },
+        { location: [40.7128, -74.006], size: 0.1 },
+      ],
+      onRender: (state) => {
+        // Called on every animation frame.
+        // `state` will be an empty object, return updated params.
+        state.phi = phi;
+        phi += 0.01;
+      },
+    });
+
+    return () => {
+      globe.destroy();
+    };
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      style={{ width: 600, height: 600, maxWidth: "100%", aspectRatio: 1 }}
+      className={className}
+    />
   );
 };
 

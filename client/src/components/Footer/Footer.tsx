@@ -8,7 +8,11 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <h3 className="text-white text-lg font-bold mb-4">
-              Keyy<span className="text-orange-600 font-bold">Press</span>
+              <span className="border border-r-8  px-1">
+                k<span className="text-orange-600">P</span>
+              </span>{" "}
+              &nbsp; Keyy
+              <span className="text-orange-600 font-bold">Press</span>
             </h3>
             <p className="mb-4">
               Creating innovative solutions for tomorrow's challenges.

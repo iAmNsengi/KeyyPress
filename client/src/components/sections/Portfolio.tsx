@@ -40,6 +40,34 @@ const products = [
       "https://www.jamfal.com/k/download/screen/2017/07/kashipara.com_1-PNG356365431.PNG",
     description: "Intuitive dashboard for healthcare professionals",
   },
+  {
+    title: "Learning Platform",
+    link: "#",
+    thumbnail:
+      "https://www.jamfal.com/k/download/screen/2017/07/kashipara.com_1-PNG356365431.PNG",
+    description: "Intuitive dashboard for healthcare professionals",
+  },
+  {
+    title: "Learning Platform",
+    link: "#",
+    thumbnail:
+      "https://www.jamfal.com/k/download/screen/2017/07/kashipara.com_1-PNG356365431.PNG",
+    description: "Intuitive dashboard for healthcare professionals",
+  },
+  {
+    title: "Learning Platform",
+    link: "#",
+    thumbnail:
+      "https://www.jamfal.com/k/download/screen/2017/07/kashipara.com_1-PNG356365431.PNG",
+    description: "Intuitive dashboard for healthcare professionals",
+  },
+  {
+    title: "Learning Platform",
+    link: "#",
+    thumbnail:
+      "https://www.jamfal.com/k/download/screen/2017/07/kashipara.com_1-PNG356365431.PNG",
+    description: "Intuitive dashboard for healthcare professionals",
+  },
 ];
 
 export function Portfolio() {

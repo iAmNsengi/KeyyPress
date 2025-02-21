@@ -14,14 +14,13 @@ const teamMembers = [
     },
   },
   {
-    name: "Fabrice",
-    role: "UI/UX Designer",
-    image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=300&h=300&fit=crop",
+    name: "Fabrice Ingabire",
+    role: "Project Manager",
+    image: "/fabrice.jpg",
     bio: "Creative designer passionate about crafting beautiful and intuitive user experiences.",
     socials: {
       github: "https://github.com",
-      linkedin: "https://linkedin.com",
+      linkedin: "https://www.linkedin.com/in/fabrice-ingabire-473a13224/",
       twitter: "https://twitter.com",
     },
   },

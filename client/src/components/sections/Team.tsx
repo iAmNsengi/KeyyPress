@@ -65,7 +65,7 @@ const Team = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 place-items-center">
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.name}
@@ -73,7 +73,7 @@ const Team = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="group relative"
+              className="group relative max-w-sm w-full"
             >
               <div className="relative overflow-hidden rounded-xl bg-slate-800">
                 <div className="aspect-square">
@@ -82,14 +82,14 @@ const Team = () => {
                     alt={member.name}
                     className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/20 opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
                 </div>
 
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <h3 className="text-xl font-semibold text-white mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-orange-500 font-medium mb-2">
+                  <p className="text-orange-300 font-bold mb-2">
                     {member.role}
                   </p>
                   <p className="text-gray-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

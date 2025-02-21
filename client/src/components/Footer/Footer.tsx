@@ -100,7 +100,7 @@ const Footer = () => {
               <li>123 Business Street</li>
               <li>City, State 12345</li>
               <li>Phone: (123) 456-7890</li>
-              <li>Email: info@company.com</li>
+              <li>Email: info@keyypress.com</li>
             </ul>
           </div>
         </div>

@@ -99,7 +99,7 @@ const Team = () => {
                     {member.bio}
                   </p>
 
-                  <div className="flex space-x-4 text-gray-400">
+                  <div className="flex space-x-4 text-gray-400 p-2">
                     <a
                       href={member.socials.github}
                       target="_blank"

@@ -15,32 +15,33 @@ const MovingCards = () => {
 const testimonials = [
   {
     quote:
-      "Had a privilege to work with KeyyPress, they are very good at their work and very cooperative.",
-    name: "Marie Chartine Noella",
-    title: "Software Developer @AmaliTech",
+      "Working with KeyyPress was a game-changer for our project. Their attention to detail and technical expertise in full-stack development made our collaboration seamless.",
+    name: "Chioma Adebayo",
+    title: "Senior Software Engineer @Microsoft Africa",
   },
   {
     quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
-  },
-  {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
+      "KeyyPress brought exceptional value to our team. Their problem-solving skills and dedication to clean, efficient code made them a pleasure to work with.",
+    name: "Kwame Mensah",
+    title: "Tech Lead @Andela",
   },
   {
     quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
+      "I had the pleasure of collaborating with KeyyPress on several projects. Their expertise in React and Node.js significantly improved our application's performance.",
+    name: "Amara Okafor",
+    title: "Frontend Developer @Paystack",
   },
   {
     quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
+      "KeyyPress demonstrated outstanding proficiency in both frontend and backend development. Their commitment to delivering high-quality solutions was impressive.",
+    name: "Tendai Mutasa",
+    title: "Software Architect @Flutterwave",
+  },
+  {
+    quote:
+      "A brilliant developer who brings both technical excellence and great communication skills to the table. KeyyPress was instrumental in the success of our project.",
+    name: "Aisha Diallo",
+    title: "CTO @KasuwaAfrica",
   },
 ];
 

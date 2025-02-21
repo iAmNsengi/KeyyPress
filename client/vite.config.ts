@@ -1,6 +1,10 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import compression from "vite-plugin-compression";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -11,12 +15,17 @@ export default defineConfig({
       ext: ".gz",
     }),
   ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
   build: {
     rollupOptions: {
       output: {
         manualChunks: {
           "react-vendor": ["react", "react-dom", "react-router-dom"],
-          "ui-components": ["lucide-react", "react-icons"],
+          "ui-components": ["@tabler/icons-react"],
         },
       },
     },
@@ -27,6 +36,14 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true,
       },
+    },
+  },
+  optimizeDeps: {
+    include: ["react", "react-dom", "react-router-dom", "@tabler/icons-react"],
+  },
+  server: {
+    hmr: {
+      overlay: false,
     },
   },
 });

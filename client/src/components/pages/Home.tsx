@@ -1,11 +1,11 @@
 import { Suspense, lazy } from "react";
 import Header from "../Header/Header";
+import Services from "../sections/Services";
+import WhyChooseUs from "../sections/WhyChooseUs";
 
-// Lazy load non-critical sections
-const Services = lazy(() => import("../sections/Services"));
+// Lazy load only below-the-fold components
 const Portfolio = lazy(() => import("../sections/Portfolio"));
 const ContactCTA = lazy(() => import("../sections/ContactCTA"));
-const WhyChooseUs = lazy(() => import("../sections/WhyChooseUs"));
 const ContactForm = lazy(() => import("../ContactForm/ContactForm"));
 const Footer = lazy(() => import("../Footer/Footer"));
 
@@ -19,18 +19,12 @@ const SectionLoader = () => (
 const Home = () => {
   return (
     <div className="bg-slate-900">
-      {/* Header is not lazy loaded as it's critical */}
+      {/* Critical components loaded immediately */}
       <Header />
+      <Services />
+      <WhyChooseUs />
 
-      {/* Each section has its own Suspense boundary */}
-      <Suspense fallback={<SectionLoader />}>
-        <Services />
-      </Suspense>
-
-      <Suspense fallback={<SectionLoader />}>
-        <WhyChooseUs />
-      </Suspense>
-
+      {/* Below-the-fold components lazy loaded */}
       <Suspense fallback={<SectionLoader />}>
         <Portfolio />
       </Suspense>

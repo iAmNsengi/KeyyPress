@@ -3,19 +3,42 @@ import { Suspense, lazy } from "react";
 import LoadingSpinner from "./components/ui/LoadingSpinner";
 import "./index.css";
 
-// Lazy load pages
-const Home = lazy(() => import("./components/pages/Home"));
+// Preload the Home component
+const Home = lazy(() =>
+  import("./components/pages/Home").then((module) => {
+    //  a small delay to prevent flash of loading screen for fast connections
+    return new Promise((resolve) => {
+      requestAnimationFrame(() => {
+        resolve(module);
+      });
+    });
+  })
+);
+
+// NotFound can load later since it's not the main route
 const NotFound = lazy(() => import("./components/pages/NotFound"));
 
 function App() {
   return (
     <BrowserRouter>
-      <Suspense fallback={<LoadingSpinner />}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Suspense fallback={<LoadingSpinner />}>
+              <Home />
+            </Suspense>
+          }
+        />
+        <Route
+          path="*"
+          element={
+            <Suspense fallback={<LoadingSpinner />}>
+              <NotFound />
+            </Suspense>
+          }
+        />
+      </Routes>
     </BrowserRouter>
   );
 }

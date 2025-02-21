@@ -4,7 +4,6 @@ import Navbar from "./Navbar";
 import { Boxes } from "../ui/background-boxes";
 import { ColourfulText } from "../ui/colorful-text";
 import Globe from "./Globe";
-import { cn } from "../../lib/utils";
 import { BackgroundBeamsWithCollision } from "../ui/beams-with-collision";
 import Button from "../Button";
 import MovingCards from "./MovingCards";
@@ -12,39 +11,42 @@ import MovingCards from "./MovingCards";
 const Header = () => {
   return (
     <BackgroundBeamsWithCollision>
-      <div className="flex flex-col h-full ">
+      <div className="flex flex-col min-h-screen">
         <Navbar />
-        <div className="h-full w-screen ">
-          <div className="h-full relative w-full overflow-hidden bg-slate-900 flex flex-col lg:flex-row items-center justify-between px-4 md:px-8 lg:px-36 rounded-lg">
+        <div className="flex-1 w-full">
+          <div className="relative w-full h-full bg-slate-900 flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 pb-20">
             <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
-
             <Boxes />
-            <div className="text-left lg:text-left mb-8 lg:mb-0 pt-40 md:pt-20 2staxl:px-32">
-              <h2
-                className={cn(
-                  "text-2xl md:text-2xl lg:text-4xl text-white relative z-20"
-                )}
-              >
+
+            {/* Main content container - adjusted padding top */}
+            <div className="relative z-20 text-center max-w-4xl mx-auto pt-96">
+              <h2 className="text-xl md:text-2xl lg:text-3xl text-white font-light tracking-wide mb-3">
                 We are
               </h2>
-              <h1
-                className={cn(
-                  "text-6xl md:text-5xl lg:text-7xl xl:text-8xl text-white relative z-20 mt-2"
-                )}
-              >
+              <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-white mt-2 font-bold tracking-tight">
                 Keyy
-                <span className="text-orange-600 font-bold">
-                  <ColourfulText text="Press..." />
+                <span className="text-orange-600">
+                  <ColourfulText text="Press" />
                 </span>
               </h1>
-              <p className="text-base md:text-lg mt-2 text-neutral-300 relative z-20 py-4 md:py-6 max-w-md mx-auto lg:mx-0">
-                A software development company dedicated to serving you with
-                great software solutions,...
+              <p className="text-base md:text-lg mt-8 text-neutral-300 max-w-2xl mx-auto px-4 leading-relaxed">
+                We specialize in crafting bespoke software solutions that drive
+                business growth and innovation. From enterprise applications to
+                cutting-edge web platforms, our expert team transforms complex
+                challenges into elegant, efficient digital solutions tailored to
+                your unique needs.
               </p>
-              <Button text="Get Started" />
+              <div className="mt-10">
+                <Button text="Start Your Journey" />
+              </div>
             </div>
-            <div className="hidden lg:block xl:px-32">
-              <Globe />
+
+            {/* Globe positioned in bottom right with slice effect and responsive visibility */}
+            <div className="absolute bottom-0 right-0 transform translate-x-1/3 translate-y-1/2 z-30 overflow-hidden hidden md:block">
+              <div className="relative">
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent to-slate-900 z-10" />
+                <Globe />
+              </div>
             </div>
           </div>
         </div>

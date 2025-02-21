@@ -89,7 +89,7 @@ const Team = () => {
                   <h3 className="text-xl font-semibold text-white mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-orange-300 font-bold mb-2">
+                  <p className="text-green-400 font-bold mb-2">
                     {member.role}
                   </p>
                   <p className="text-gray-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

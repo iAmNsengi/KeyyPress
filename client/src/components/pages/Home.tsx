@@ -3,6 +3,8 @@ import Services from "../sections/Services";
 import Portfolio from "../sections/Portfolio";
 import ContactCTA from "../sections/ContactCTA";
 import WhyChooseUs from "../sections/WhyChooseUs";
+import ContactForm from "../ContactForm/ContactForm";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   return (
@@ -11,7 +13,9 @@ const Home = () => {
       <Services />
       <WhyChooseUs />
       <Portfolio />
+      <ContactForm />
       <ContactCTA />
+      <Footer />
     </div>
   );
 };

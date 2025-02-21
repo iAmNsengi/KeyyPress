@@ -4,17 +4,16 @@ interface Props {
 
 const Button = ({ text }: Props) => {
   return (
-    <button className="bg-transparent no-underline group cursor-pointer relative rounded-full p-px text-xs font-semibold leading-6 text-white inline-block ">
-      <span className="absolute overflow-hidden rounded-full">
-        <span className="absolute rounded-full duration-500 " />
-      </span>
-      <div className="relative flex space-x-2 items-center z-10 rounded-full text-white bg-orange-600 hover:bg-transparent hover:text-orange-600  px-8 py-2">
-        <span> {text} </span>
+    <button className="relative inline-flex items-center group rounded-full text-sm md:text-base">
+      {/* Button content */}
+      <div className="relative flex items-center space-x-2 rounded-full bg-orange-600 px-4 py-2 md:px-6 md:py-2.5 transition-all duration-300 hover:bg-transparent border border-transparent hover:border-orange-600">
+        <span className="text-white group-hover:text-orange-600 font-semibold">
+          {text}
+        </span>
         <svg
+          className="w-4 h-4 md:w-5 md:h-5 text-white group-hover:text-orange-600 transition-transform duration-300 group-hover:translate-x-1"
           fill="none"
-          height="16"
           viewBox="0 0 24 24"
-          width="16"
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
@@ -26,7 +25,9 @@ const Button = ({ text }: Props) => {
           />
         </svg>
       </div>
-      <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 duration-500" />
+
+      {/* Subtle bottom line effect */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-px w-[90%] bg-gradient-to-r from-transparent via-orange-400/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
     </button>
   );
 };

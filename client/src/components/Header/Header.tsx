@@ -7,14 +7,15 @@ import Globe from "./Globe";
 import { cn } from "../../lib/utils";
 import { BackgroundBeamsWithCollision } from "../ui/beams-with-collision";
 import Button from "../Button";
+import MovingCards from "./MovingCards";
 
 const Header = () => {
   return (
     <BackgroundBeamsWithCollision>
-      <div className="flex flex-col pt-4 md:pt-14">
+      <div className="flex flex-col h-full ">
         <Navbar />
-        <div className="h-screen w-screen">
-          <div className="h-2/3 relative w-full overflow-hidden bg-slate-900 flex flex-col lg:flex-row items-center justify-between px-4 md:px-8 lg:px-36 rounded-lg">
+        <div className="h-full w-screen ">
+          <div className="h-full relative w-full overflow-hidden bg-slate-900 flex flex-col lg:flex-row items-center justify-between px-4 md:px-8 lg:px-36 rounded-lg">
             <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
 
             <Boxes />
@@ -47,6 +48,7 @@ const Header = () => {
             </div>
           </div>
         </div>
+        <MovingCards />
       </div>
     </BackgroundBeamsWithCollision>
   );

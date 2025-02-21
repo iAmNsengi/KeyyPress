@@ -85,14 +85,17 @@ const Team = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/20 opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
                 </div>
 
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <h3 className="text-xl font-semibold text-white mb-1">
-                    {member.name}
-                  </h3>
-                  <p className="text-green-400 font-bold mb-2">
-                    {member.role}
-                  </p>
-                  <p className="text-gray-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div className="absolute bottom-0 left-0 right-0">
+                  <div className="bg-slate-200/50 px-3 w-full">
+                    <h3 className="text-xl font-semibold text-white mb-1">
+                      {member.name}
+                    </h3>
+                    <p className="text-orange-700 font-bold mb-2 ">
+                      {member.role}
+                    </p>
+                  </div>
+
+                  <p className="text-gray-300 text-sm mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 px-6">
                     {member.bio}
                   </p>
 

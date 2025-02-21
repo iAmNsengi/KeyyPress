@@ -1,5 +1,3 @@
-"use client";
-
 import Navbar from "./Navbar";
 import { Boxes } from "../ui/background-boxes";
 import { ColourfulText } from "../ui/colorful-text";

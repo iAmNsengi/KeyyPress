@@ -6,6 +6,7 @@ import { ColourfulText } from "../ui/colorful-text";
 import Globe from "./Globe";
 import { cn } from "../../lib/utils";
 import { BackgroundBeamsWithCollision } from "../ui/beams-with-collision";
+import Button from "../Button";
 
 const Header = () => {
   return (
@@ -39,9 +40,7 @@ const Header = () => {
                 A software development company dedicated to serving you with
                 great software solutions,...
               </p>
-              <button className="bg-orange-600 text-white border border-orange-600 hover:bg-transparent hover:text-orange-600 px-7 py-2 z-40 relative mt-4">
-                Get Started
-              </button>
+              <Button text="Get Started" />
             </div>
             <div className="hidden lg:block xl:px-32">
               <Globe />

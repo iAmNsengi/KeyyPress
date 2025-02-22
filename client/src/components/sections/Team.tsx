@@ -5,7 +5,7 @@ import { Github, Linkedin, Twitter } from "lucide-react";
 const teamMembers = [
   {
     name: "Eliezer Nsengi",
-    role: "Lead Developer & Founder",
+    role: "Founder & Lead Developer",
     image: "/founder.jpeg",
     bio: "Full-stack expert with 6+ years of experience in building scalable applications.",
     socials: {
@@ -72,7 +72,7 @@ const Team = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               className="group relative max-w-sm w-full"
             >
               <div className="relative overflow-hidden rounded-xl bg-slate-800">
@@ -80,6 +80,8 @@ const Team = () => {
                   <img
                     src={member.image}
                     alt={member.name}
+                    loading="lazy"
+                    decoding="async"
                     className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-slate-900/20 opacity-70 group-hover:opacity-90 transition-opacity duration-300" />
@@ -87,7 +89,7 @@ const Team = () => {
 
                 <div className="absolute bottom-0 left-0 right-0">
                   <div className="bg-slate-200/50 px-3 w-full">
-                    <h3 className="text-xl font-semibold text-white mb-1">
+                    <h3 className="text-xl text-white font-bold mb-1">
                       {member.name}
                     </h3>
                     <p className="text-orange-700 font-bold mb-2 ">

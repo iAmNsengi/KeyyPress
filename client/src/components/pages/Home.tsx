@@ -1,4 +1,4 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import Header from "../Header/Header";
 import Services from "../sections/Services";
 import WhyChooseUs from "../sections/WhyChooseUs";
@@ -18,36 +18,42 @@ const SectionLoader = () => (
   </div>
 );
 
+// Pre-load critical images
+const preloadImages = () => {
+  const images = ["/founder.jpeg", "/fabrice.jpg", "/johnson.jpeg"];
+  images.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+};
+
 const Home = () => {
+  useEffect(() => {
+    preloadImages();
+  }, []);
+
   return (
     <div className="bg-slate-900">
-      {/* Critical components loaded immediately */}
+      {/* Critical above-the-fold content */}
       <Header />
-      <Services />
-      <WhyChooseUs />
 
-      {/* Below-the-fold components lazy loaded */}
+      {/* Defer non-critical sections with loading boundaries */}
       <Suspense fallback={<SectionLoader />}>
-        <Portfolio />
+        <Services />
+        <WhyChooseUs />
       </Suspense>
 
+      {/* Group related sections to reduce Suspense boundaries */}
       <Suspense fallback={<SectionLoader />}>
+        <Portfolio />
         <Team />
       </Suspense>
 
+      {/* Group bottom sections */}
       <Suspense fallback={<SectionLoader />}>
         <ContactForm />
-      </Suspense>
-
-      <Suspense fallback={<SectionLoader />}>
         <ContactCTA />
-      </Suspense>
-
-      <Suspense fallback={<SectionLoader />}>
         <ClientLogos />
-      </Suspense>
-
-      <Suspense fallback={<SectionLoader />}>
         <Footer />
       </Suspense>
     </div>

@@ -10,6 +10,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           "react-vendor": ["react", "react-dom", "react-router-dom"],
+          "ui-components": ["framer-motion", "lucide-react"],
         },
       },
     },
@@ -17,5 +18,8 @@ export default defineConfig({
   server: {
     port: 3000,
     host: true,
+  },
+  optimizeDeps: {
+    include: ["react", "react-dom", "framer-motion"],
   },
 });

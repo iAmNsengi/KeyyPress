@@ -8,16 +8,14 @@ import {
   MotionValue,
 } from "framer-motion";
 
-// Replace next/image and next/link with appropriate alternatives
 import { Link } from "react-router-dom";
 
 const products = [
   {
-    title: "E-Commerce Platform",
-    link: "#",
-    thumbnail:
-      "https://img.freepik.com/premium-vector/medical-healthcare-landing-page-design-template_672162-254.jpg",
-    description: "Modern e-commerce solution with advanced features",
+    title: "Planete Hotel",
+    link: "https://www.planetehotelrwanda.com/",
+    thumbnail: "/portfolio/planete_hotel.png",
+    description: "A hotel management system, Planete Hotel Rwanda",
   },
   {
     title: "Healthcare Dashboard",
